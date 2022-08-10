@@ -4,6 +4,12 @@
  *
  */
 import { FontAwesome } from '@expo/vector-icons';
+
+import { AntDesign } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { Foundation } from '@expo/vector-icons';
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -70,7 +76,7 @@ function BottomTabNavigator() {
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
           title: 'Order',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="isv" size={24} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Modal')}
@@ -93,7 +99,7 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: 'Stroe',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <Entypo name="install" size={24} color={color} />,
         }}
       />
 
@@ -102,7 +108,7 @@ function BottomTabNavigator() {
         component={TabThreeScreen}
         options={{
           title: 'Bill',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome5 name="money-bill-wave" size={24} color={color} />,
         }}
       />
 
@@ -113,7 +119,7 @@ function BottomTabNavigator() {
         component={TabFourScreen}
         options={{
           title: 'More',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <Foundation name="indent-more" size={24} color={color} />,
         }}
       />
 
@@ -121,7 +127,7 @@ function BottomTabNavigator() {
         name="TabFive"
         component={TabFiveScreen}
         options={{
-          title: 'Five',
+          title: 'Soon',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
